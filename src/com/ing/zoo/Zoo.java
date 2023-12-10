@@ -16,6 +16,7 @@ public class Zoo {
         commands[2] = "give meat";
         commands[3] = "perform trick";
 
+        //get animals
         ArrayList<Animal> animals = getAnimals();
 
 
@@ -23,6 +24,7 @@ public class Zoo {
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine();
+        //for loop trough each command check
         for (Animal animal : animals) {
             if (input.equals(commands[0] + " " + animal.getName())) {
                 animal.sayHello();
@@ -43,7 +45,7 @@ public class Zoo {
                 }
             } else if (input.equals(commands[3])) {
                 if (animal instanceof Trick) {
-                    System.out.print(animal.getName() + " says: ");
+                    System.out.print(animal.getName() + ": ");
                     ((Trick) animal).performTrick();
                 }
             } else {
@@ -53,12 +55,18 @@ public class Zoo {
         }
     }
 
+    /**
+     * @author Emmanuela Odoi
+     * create an animal and add to an arraylist
+     */
     private static ArrayList<Animal> getAnimals() {
         Lion henk = new Lion("henk", "roooaoaaaaar", "nomnomnom thx mate");
         Hippo elsa = new Hippo("elsa", "splash", "munch munch lovely");
         Pig dora = new Pig("dora", "splash", "", "");
         Tiger wally = new Tiger("wally", "rraaarww", "nomnomnom oink wubalubadubdub", "");
         Zebra marty = new Zebra("marty", "zebra zebra", "munch munch zank yee bra", "");
+        Bird birdy = new Bird("birdy","sshiikaaww","","");
+        Monkey george = new Monkey("george","ee ee aa aa","smssmsn","jump to another rope");
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(henk);
@@ -66,6 +74,8 @@ public class Zoo {
         animals.add(dora);
         animals.add(wally);
         animals.add(marty);
+        animals.add(birdy);
+        animals.add(george);
         return animals;
     }
 }
