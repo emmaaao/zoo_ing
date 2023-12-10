@@ -2,16 +2,15 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Tiger {
-    public String name;
-    public String helloText;
-    public String eatText;
+public class Tiger extends Animal {
     public String trick;
 
-    public Tiger()
-    {
+    public Tiger(String name, String helloText, String eatText, String trick) {
+        super(name, helloText, eatText);
+        this.trick = trick;
     }
 
+    @Override
     public void sayHello()
     {
         helloText = "rraaarww";
