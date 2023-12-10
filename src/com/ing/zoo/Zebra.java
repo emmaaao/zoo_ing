@@ -1,8 +1,10 @@
 package com.ing.zoo;
 
+import com.ing.zoo.character.Herbivore;
+
 import java.util.Random;
 
-public class Zebra extends Animal{
+public class Zebra extends Animal implements Herbivore {
     public String trick;
 
     public Zebra(String name, String helloText, String eatText, String trick) {
@@ -13,13 +15,12 @@ public class Zebra extends Animal{
     @Override
     public void sayHello()
     {
-        helloText = "zebra zebra";
         System.out.println(helloText);
     }
 
+    @Override
     public void eatLeaves()
     {
-        eatText = "munch munch zank yee bra";
         System.out.println(eatText);
     }
 }

@@ -1,5 +1,8 @@
 package com.ing.zoo;
 
+import com.ing.zoo.character.Carnivore;
+import com.ing.zoo.character.Herbivore;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,8 +29,19 @@ public class Zoo {
             if (input.equals(commands[0])) {
                 System.out.print(animal.getName() + " says: ");
                 animal.sayHello();
+            } else if (input.equals(commands[1])) {
+                if (animal instanceof Herbivore) {
+                    System.out.print(animal.getName() + " says: ");
+                    ((Herbivore) animal).eatLeaves();
+                }
+            } else if (input.equals(commands[2])) {
+                if (animal instanceof Carnivore) {
+                    System.out.print(animal.getName() + " says: ");
+                    ((Carnivore) animal).eatMeat();
+                }
             } else {
                 System.out.println("Unknown command: " + input);
+                break;
             }
         }
     }

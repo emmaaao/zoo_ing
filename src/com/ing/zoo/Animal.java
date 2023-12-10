@@ -1,5 +1,9 @@
 package com.ing.zoo;
 
+/**
+ * @author Emmanuela Odoi
+ * Extendable parent class Animal
+ */
 public class Animal {
     protected String name;
     protected String helloText;

@@ -1,8 +1,10 @@
 package com.ing.zoo;
 
+import com.ing.zoo.character.Carnivore;
+
 import java.util.Random;
 
-public class Tiger extends Animal {
+public class Tiger extends Animal implements Carnivore {
     public String trick;
 
     public Tiger(String name, String helloText, String eatText, String trick) {
@@ -13,13 +15,12 @@ public class Tiger extends Animal {
     @Override
     public void sayHello()
     {
-        helloText = "rraaarww";
         System.out.println(helloText);
     }
 
+    @Override
     public void eatMeat()
     {
-        eatText = "nomnomnom oink wubalubadubdub";
         System.out.println(eatText);
     }
 
