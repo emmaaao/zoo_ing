@@ -2,10 +2,11 @@ package com.ing.zoo;
 
 import com.ing.zoo.character.Carnivore;
 import com.ing.zoo.character.Herbivore;
+import com.ing.zoo.character.Trick;
 
 import java.util.Random;
 
-public class Pig extends Animal implements Herbivore, Carnivore {
+public class Pig extends Animal implements Herbivore, Carnivore, Trick {
     public String trick;
 
     public Pig(String name, String helloText, String eatText, String trick) {
@@ -33,6 +34,7 @@ public class Pig extends Animal implements Herbivore, Carnivore {
         System.out.println(eatText);
     }
 
+    @Override
     public void performTrick()
     {
         Random random = new Random();
