@@ -35,3 +35,4 @@ Bij elke command laat je het resultaat in de console  zien.
 - Als je de [give leaves] command uitvoert krijgen alle herbivores leaves.
 - Als je de [give meat] command uitvoert krijgen alle carnivores meat.
 - Als je de [perform trick] command uitvoert doen alle dieren die dat kunnen hun trucje.
+"# zoo_ing" 
