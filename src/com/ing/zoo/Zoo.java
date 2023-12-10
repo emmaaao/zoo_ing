@@ -1,5 +1,6 @@
 package com.ing.zoo;
 
+import com.ing.zoo.animals.*;
 import com.ing.zoo.character.Carnivore;
 import com.ing.zoo.character.Herbivore;
 import com.ing.zoo.character.Trick;
