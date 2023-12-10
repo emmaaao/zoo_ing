@@ -14,28 +14,22 @@ public class Tiger extends Animal implements Carnivore, Trick {
     }
 
     @Override
-    public void sayHello()
-    {
+    public void sayHello() {
         System.out.println(helloText);
     }
 
     @Override
-    public void eatMeat()
-    {
+    public void eatMeat() {
         System.out.println(eatText);
     }
 
     @Override
-    public void performTrick()
-    {
+    public void performTrick() {
         Random random = new Random();
         int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
+        if (rnd == 0) {
             trick = "jumps in tree";
-        }
-        else
-        {
+        } else {
             trick = "scratches ears";
         }
         System.out.println(trick);

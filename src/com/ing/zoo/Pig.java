@@ -15,36 +15,29 @@ public class Pig extends Animal implements Herbivore, Carnivore, Trick {
     }
 
     @Override
-    public void sayHello()
-    {
+    public void sayHello() {
         System.out.println(helloText);
     }
 
     @Override
-    public void eatLeaves()
-    {
+    public void eatLeaves() {
         eatText = "munch munch oink";
         System.out.println(eatText);
     }
 
     @Override
-    public void eatMeat()
-    {
+    public void eatMeat() {
         eatText = "nomnomnom oink thx";
         System.out.println(eatText);
     }
 
     @Override
-    public void performTrick()
-    {
+    public void performTrick() {
         Random random = new Random();
         int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
+        if (rnd == 0) {
             trick = "rolls in the mud";
-        }
-        else
-        {
+        } else {
             trick = "runs in circles";
         }
         System.out.println(trick);

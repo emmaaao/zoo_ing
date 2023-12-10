@@ -14,19 +14,24 @@ public class Zebra extends Animal implements Herbivore, Trick {
     }
 
     @Override
-    public void sayHello()
-    {
+    public void sayHello() {
         System.out.println(helloText);
     }
 
     @Override
-    public void eatLeaves()
-    {
+    public void eatLeaves() {
         System.out.println(eatText);
     }
 
     @Override
     public void performTrick() {
-
+        Random random = new Random();
+        int rnd = random.nextInt(2);
+        if (rnd == 0) {
+            trick = "jumps over river";
+        } else {
+            trick = "grazing on grass";
+        }
+        System.out.println(trick);
     }
 }

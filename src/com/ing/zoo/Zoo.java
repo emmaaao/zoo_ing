@@ -2,6 +2,7 @@ package com.ing.zoo;
 
 import com.ing.zoo.character.Carnivore;
 import com.ing.zoo.character.Herbivore;
+import com.ing.zoo.character.Trick;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -38,6 +39,11 @@ public class Zoo {
                 if (animal instanceof Carnivore) {
                     System.out.print(animal.getName() + " says: ");
                     ((Carnivore) animal).eatMeat();
+                }
+            } else if (input.equals(commands[3])) {
+                if (animal instanceof Trick) {
+                    System.out.print(animal.getName() + " says: ");
+                    ((Trick) animal).performTrick();
                 }
             } else {
                 System.out.println("Unknown command: " + input);
